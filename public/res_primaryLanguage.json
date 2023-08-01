@@ -1,7 +1,7 @@
 {
     "basic_info": {
       "description_header": "Hi",
-      "description": "👋 I'm Chirag Kular. Software Engineer with a Master's degree in Computer Science and 4+ years of developing full stack enterprise web applications",
+      "description": "👋 I'm Chirag Kular. Software Engineer with a Master's degree in Computer Science and 5+ years of developing full stack enterprise web applications",
       "section_name": {
         "about": "About me",
         "projects": "Projects",
@@ -82,10 +82,27 @@
       }
     ],
     "experience": [
+        {
+        "company": "ICF",
+        "title": "Senior Software Engineer",
+        "years": "07.2023 - Present",
+        "mainTech": [
+          "NodeJS, AWS, Lambda"
+        ],
+        "technologies": [
+          "JavaScript",
+          "Jest",
+          "Microservices",
+          "AWS S3",
+          "AWS Lambda",
+          "SNS",
+          "Docker",
+        ]
+      },
       {
         "company": "MatrixCare",
         "title": "Software Engineer",
-        "years": "08.2020 - present",
+        "years": "08.2020 - 06.2023",
         "mainTech": [
           "Angular, Java, SQL"
         ],
