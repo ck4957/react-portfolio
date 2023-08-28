@@ -30,6 +30,11 @@
           "level": "75"
         },
         {
+          "name": "React",
+          "class": "devicon-react-original",
+          "level": "70"
+        },
+        {
           "name": "Angular",
           "class": "devicon-angularjs-plain",
           "level": "70"
@@ -42,6 +47,11 @@
         {
           "name": "JavaScript",
           "class": "devicon-javascript-plain",
+          "level": "60"
+        },
+        {
+          "name": "NodeJS",
+          "class": "devicon-nodejs-plain",
           "level": "60"
         },
         {

@@ -63,7 +63,7 @@
         "startDate": "2016",
         "description": "Created an application that parsed programmable Web API’s data using Python and stored it in MongoDB. Designed a search page using AngularJS and Flask framework to search relevant APIs from the stored data",
         "images": [
-          "images/webservices1.jpg"
+          "images/webServices1.JPG"
         ],
         "technologies": [
           {
@@ -83,9 +83,26 @@
     ],
     "experience": [
       {
+        "company": "ICF",
+        "title": "Senior Software Engineer",
+        "years": "07.2023 - Present",
+        "mainTech": [
+          "NodeJS, AWS, Lambda"
+        ],
+        "technologies": [
+          "JavaScript",
+          "Jest",
+          "Microservices",
+          "AWS S3",
+          "AWS Lambda",
+          "SNS",
+          "Docker"
+        ]
+      },
+      {
         "company": "MatrixCare",
         "title": "Software Engineer",
-        "years": "08.2020 - present",
+        "years": "08.2020 - 06.2023",
         "mainTech": [
           "Angular, Java, SQL"
         ],
