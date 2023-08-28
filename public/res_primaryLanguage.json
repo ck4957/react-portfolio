@@ -63,7 +63,7 @@
         "startDate": "2016",
         "description": "Created an application that parsed programmable Web API’s data using Python and stored it in MongoDB. Designed a search page using AngularJS and Flask framework to search relevant APIs from the stored data",
         "images": [
-          "images/webservices1.jpg"
+          "images/webServices1.JPG"
         ],
         "technologies": [
           {
