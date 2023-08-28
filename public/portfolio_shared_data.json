@@ -1,7 +1,7 @@
 {
     "basic_info": {
       "name": "Chirag Kular",
-      "titles": [ "Full stack Developer", "Software Engineer", "Software Developer" ],
+      "titles": [ "Full stack Developer", "Software Engineer" ],
       "social": [
         {
           "name": "github",
@@ -29,6 +29,11 @@
           "class": "devicon-css3-plain",
           "level": "75"
         },
+          {
+              "name":"React",
+              "class":"devicon-react-original",
+              "level":"70"
+          },
         {
           "name": "Angular",
           "class": "devicon-angularjs-plain",
@@ -42,6 +47,11 @@
         {
           "name": "JavaScript",
           "class": "devicon-javascript-plain",
+          "level": "60"
+        },
+          {
+          "name": "NodeJS",
+          "class": "devicon-nodejs-plain",
           "level": "60"
         },
         {
