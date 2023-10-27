@@ -12,10 +12,16 @@
           "name": "Linkedin",
           "url": "https://www.linkedin.com/in/kularchirag",
           "class": "fab fa-linkedin-in"
+        },
+        {
+          "name":"Buy Me Coffee",
+          "url":"https://buymeacoffee.com/ckular",
+          "class":"fab fa-buymeacoffee"
         }
       
       ],
-      "image": "myProfile.jpeg"
+      "image": "Chirag.jpg",
+      "aws_certification": "aws_dva_c02.png"
     },
     "skills": {
       "icons": [
