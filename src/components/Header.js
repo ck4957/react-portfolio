@@ -107,7 +107,7 @@ class Header extends Component {
                   style={{
                     height: "auto",
                     fontSize: "132%",
-                    lineHeight: "200%",
+                    lineHeight: "200%", whiteSpace:"pre-wrap"
                   }}
                 >
                   <br />
