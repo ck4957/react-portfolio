@@ -31,7 +31,8 @@ class Header extends Component {
     }
     if (this.props.sharedBasicInfo) {
       var profilepic = "images/" + this.props.sharedBasicInfo.image;
-      var awsDvaBadge = "images/" + this.props.sharedBasicInfo.aws_certification;
+      var awsDvaBadge = "images/" + this.props.sharedBasicInfo.aws_certifications[0];
+      var awsSaaBadge = "images/" + this.props.sharedBasicInfo.aws_certifications[1];
     }
     if (this.props.resumeBasicInfo) {
       var sectionName = this.props.resumeBasicInfo.section_name.about;
@@ -45,12 +46,12 @@ class Header extends Component {
     return (
       <header id="home" style={{ height: window.innerHeight - 100, display: 'block' }}>
         <div className="row aligner" style={{ height: '100%' }}>
-          <div className="col-md-4 mb-5">
+          <div className="col-sm-12 col-md-4 mb-5">
             <div className="d-block">
-            <div className="polaroid">
+            <div className="polaroid center">
               <span style={{ cursor: "auto" }}>
                 <img
-                  height="350px"
+                  height="300px"
                   src={profilepic}
                   alt="Avatar placeholder"
                 />
@@ -58,16 +59,27 @@ class Header extends Component {
             </div>
             </div>
             <div className="d-block">
-            <span style={{ cursor: "auto" }}>
-                <img
-                  height="150px"
-                  src={awsDvaBadge}
-                  alt="AWS Developer Certified"
-                />
-              </span>
+              <div className="d-inline">
+                <span style={{ cursor: "auto" }}>
+                    <img
+                      height="120px"
+                      src={awsDvaBadge}
+                      alt="AWS Developer Certified"
+                    />
+                </span>
+              </div>
+              <div className="d-inline">
+                <span style={{ cursor: "auto" }}>
+                    <img
+                      height="120px"
+                      src={awsSaaBadge}
+                      alt="AWS Solutions Architect Certified"
+                    />
+                </span>
+            </div>
             </div>
           </div>
-          <div className="col-md-7">
+          <div className="col-sm-12 col-md-7">
 
             <div className="col-md-12 d-block mb-5">
               <div className="card">

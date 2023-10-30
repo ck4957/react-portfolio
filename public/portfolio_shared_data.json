@@ -21,7 +21,7 @@
       
       ],
       "image": "Chirag.jpg",
-      "aws_certification": "aws_dva_c02.png"
+      "aws_certifications": ["aws_dva_c02.png","aws_saa_c03.png"]
     },
     "skills": {
       "icons": [
