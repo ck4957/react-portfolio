@@ -58,7 +58,7 @@
           "images/alexa2.jpg",
           "images/alexa3.jpeg"
         ],
-        "url": "",
+        "url": "https://www.rit.edu/news/student-spotlight-creating-holo-assistant",
         "technologies": [
           {
             "class": "devicon-csharp-plain",
