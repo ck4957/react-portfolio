@@ -16,7 +16,7 @@
         "startDate": "Nov-2023",
         "description": "Created a E-commerce store list products in various categories and add to cart and checkout using Angular.Typescript, Express and Stripe.",
         "images": [
-          "images/Angular.png"
+          "images/AngularStore.png"
         ],
         "url": "https://https://angular-store-weld.vercel.app/home",
         "technologies": [
