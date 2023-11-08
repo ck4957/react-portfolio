@@ -12,8 +12,35 @@
     },
     "projects": [
       {
+        "title": "Angular Store",
+        "startDate": "Nov-2023",
+        "description": "Created a E-commerce store list products in various categories and add to cart and checkout using Angular.Typescript, Express and Stripe.",
+        "images": [
+          "images/Angular.png"
+        ],
+        "url": "https://https://angular-store-weld.vercel.app/home",
+        "technologies": [
+          {
+            "class": "devicon-angularjs-plain",
+            "name": "AngularJs"
+          },
+          {
+            "class": "devicon-express-original-wordmark",
+            "name": "Express"
+          },
+          {
+            "class": "tailwindcss-original-wordmark",
+            "name": "TailwindCSS"
+          },
+          {
+            "class": "devicon-materialui-plain",
+            "name": "Angular Material"
+          }
+        ]
+      },
+      {
         "title": "Housing App",
-        "startDate": "2023",
+        "startDate": "Oct-2023",
         "description": "Created a Next.js app to add and list houses for sale with shared components, hooks and deployed on Vercel.",
         "images": [
           "images/housingApp.jpg"
