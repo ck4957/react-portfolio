@@ -9,11 +9,6 @@
           "class": "fab fa-github"
         },
         {
-          "name": "Linkedin",
-          "url": "https://www.linkedin.com/in/kularchirag",
-          "class": "fab fa-linkedin-in"
-        },
-        {
           "name":"Buy Me Coffee",
           "url":"https://buymeacoffee.com/ckular",
           "class":"fab fa-buymeacoffee"
