@@ -9,11 +9,6 @@
           "class": "fab fa-github"
         },
         {
-          "name": "Linkedin",
-          "url": "https://www.linkedin.com/in/kularchirag",
-          "class": "fab fa-linkedin-in"
-        },
-        {
           "name":"Buy Me Coffee",
           "url":"https://buymeacoffee.com/ckular",
           "class":"fab fa-buymeacoffee"
@@ -21,7 +16,7 @@
       
       ],
       "image": "Chirag.jpg",
-      "aws_certifications": ["aws_dva_c02.png","aws_saa_c03.png"]
+      "certifications": ["aws_dva_c02.png","aws_saa_c03.png", "aws_dea_c01.png", "azure_ai_900.png"]
     },
     "skills": {
       "icons": [
