@@ -20,6 +20,7 @@
     "react-vertical-timeline-component": "3.6.0"
   },
   "scripts": {
+    "install": "npm i --legacy-peer-deps",
     "start": "NODE_OPTIONS=--openssl-legacy-provider react-scripts start --legacy-peer-deps",
     "build": "react-scripts build",
     "test": "react-scripts test",

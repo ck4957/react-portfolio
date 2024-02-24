@@ -31,8 +31,10 @@ class Header extends Component {
     }
     if (this.props.sharedBasicInfo) {
       var profilepic = "images/" + this.props.sharedBasicInfo.image;
-      var awsDvaBadge = "images/" + this.props.sharedBasicInfo.aws_certifications[0];
-      var awsSaaBadge = "images/" + this.props.sharedBasicInfo.aws_certifications[1];
+      var awsDvaBadge = "images/" + this.props.sharedBasicInfo.certifications[0];
+      var awsSaaBadge = "images/" + this.props.sharedBasicInfo.certifications[1];
+      var awsDeaBadge = "images/" + this.props.sharedBasicInfo.certifications[2];
+      var azureAiBadge = "images/" + this.props.sharedBasicInfo.certifications[3];
     }
     if (this.props.resumeBasicInfo) {
       var sectionName = this.props.resumeBasicInfo.section_name.about;
@@ -63,8 +65,17 @@ class Header extends Component {
                 <span style={{ cursor: "auto" }}>
                     <img
                       height="120px"
+                      src={awsDeaBadge}
+                      alt="AWS Certified Data Engineer Associate"
+                    />
+                </span>
+              </div>
+              <div className="d-inline">
+                <span style={{ cursor: "auto" }}>
+                    <img
+                      height="120px"
                       src={awsDvaBadge}
-                      alt="AWS Developer Certified"
+                      alt="AWS Certified Developer Associate"
                     />
                 </span>
               </div>
@@ -73,10 +84,19 @@ class Header extends Component {
                     <img
                       height="120px"
                       src={awsSaaBadge}
-                      alt="AWS Solutions Architect Certified"
+                      alt="AWS Certified Solutions Architect Associate"
                     />
                 </span>
-            </div>
+              </div>
+              <div className="d-inline">
+                <span style={{ cursor: "auto" }}>
+                    <img
+                      height="120px"
+                      src={azureAiBadge}
+                      alt="Microsoft Certified Azure AI Fundamentals"
+                    />
+                </span>
+              </div>
             </div>
           </div>
           <div className="col-sm-12 col-md-7">
