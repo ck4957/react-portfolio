@@ -12,6 +12,10 @@
           "name":"Buy Me Coffee",
           "url":"https://buymeacoffee.com/ckular",
           "class":"fab fa-buymeacoffee"
+        }, {
+          "name": "Medium",
+          "url":"https://medium.com/@ck4957",
+          "class":"fab fa-medium"
         }
       
       ],
@@ -86,7 +90,7 @@
           "level": "50"
         },
         {
-          "nam":"NPM",
+          "nam":"npm",
           "class":"devicon-npm-original-wordmark",
           "level":"50"
         }

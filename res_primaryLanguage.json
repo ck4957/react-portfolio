@@ -152,15 +152,16 @@
         "title": "Senior Software Engineer",
         "years": "07.2023 - Present",
         "mainTech": [
-          "NodeJS, AWS, Lambda"
+          "FHIR, NodeJS, AWS, Firely"
         ],
         "technologies": [
+          "FHIR",
           "JavaScript",
           "Jest",
           "Microservices",
           "AWS S3",
           "AWS Lambda",
-          "SNS",
+          "AWS EKS",
           "Step Functions",
           "Splunk",
           "Python",
