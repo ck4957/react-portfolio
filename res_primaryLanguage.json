@@ -18,7 +18,7 @@
         "images": [
           "images/AngularStore.png"
         ],
-        "url": "https://https://angular-store-weld.vercel.app/home",
+        "url": "https://angular-store-weld.vercel.app/home",
         "technologies": [
           {
             "class": "devicon-angularjs-plain",
@@ -103,9 +103,9 @@
         "description": "Designed a web application which takes Boston Airbnb dataset, store it in MongoDB and performed CRUD. Client-side designed using Bootstrap, Angular UI and templating for dynamic views and server-side using Express.js.",
         "images": [
           "images/airbnb1.png",
-          "images//airbnb2.png",
-          "images//airbnb3.png",
-          "images//airbnb4.png"
+          "images/airbnb2.png",
+          "images/airbnb3.png",
+          "images/airbnb4.png"
         ],
         "url": "",
         "technologies": [
@@ -149,8 +149,8 @@
     "experience": [
         {
         "company": "ICF",
-        "title": "Senior Software Engineer",
-        "years": "07.2023 - Present",
+        "title": "Software Engineer",
+        "years": "07.2023 - 10.2024",
         "mainTech": [
           "FHIR, NodeJS, AWS, Firely"
         ],
