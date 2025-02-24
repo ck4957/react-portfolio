@@ -147,7 +147,28 @@
       }
     ],
     "experience": [
-        {
+      {
+        "company": "Contract",
+        "title": "Software Engineer II",
+        "years": "10.2024 - Present",
+        "mainTech": [
+          "Lit, Vite, HTML, CSS, Angular, Typsescript, Storybook"
+        ],
+        "technologies": [
+          "HTML",
+          "JavaScript",
+          "SCSS",
+          "Storybook",
+          "Lit",
+          "TypeScript",
+          "Gitlab",
+          "CI/CD",
+          "Jest",
+          "Open Web Components",
+          "Open Shift"
+        ]
+      },
+      {
         "company": "ICF",
         "title": "Software Engineer",
         "years": "07.2023 - 10.2024",
