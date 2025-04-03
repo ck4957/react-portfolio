@@ -11,14 +11,29 @@ const Header = ({ sharedData, sharedBasicInfo, resumeBasicInfo }) => {
   const [awsDeaBadge, setAwsDeaBadge] = useState("");
   const [azureAiBadge, setAzureAiBadge] = useState("");
   const [name, setName] = useState("");
-  const [sectionName, setSectionName] = useState("");
+  //const [sectionName, setSectionName] = useState("");
   const [hello, setHello] = useState("");
   const [about, setAbout] = useState("");
+
+  if (sharedBasicInfo && sharedBasicInfo.social) {
+    var networks = sharedBasicInfo?.social?.map(function (network) {
+      console.log(network);
+      return (
+        <span key={network.name} className="m-4">
+          <a href={network.url} target="_blank" rel="noopener noreferrer">
+            <i className={network.class}></i>
+          </a>
+        </span>
+      );
+    });
+  }
 
   useEffect(() => {
     if (sharedBasicInfo) {
       setName(sharedBasicInfo?.name);
-      setTitles(sharedBasicInfo?.titles.map(x => [x.toUpperCase(), 1500]).flat());
+      setTitles(
+        sharedBasicInfo?.titles.map((x) => [x.toUpperCase(), 1500]).flat()
+      );
       setProfilePic("images/" + sharedBasicInfo.image);
       setAwsDvaBadge("images/" + sharedBasicInfo.certifications[0]);
       setAwsSaaBadge("images/" + sharedBasicInfo.certifications[1]);
@@ -26,7 +41,7 @@ const Header = ({ sharedData, sharedBasicInfo, resumeBasicInfo }) => {
       setAzureAiBadge("images/" + sharedBasicInfo.certifications[3]);
     }
     if (resumeBasicInfo) {
-      setSectionName(resumeBasicInfo.section_name.about);
+      //setSectionName(resumeBasicInfo.section_name.about);
       setHello(resumeBasicInfo.description_header);
       setAbout(resumeBasicInfo.description);
     }
@@ -40,7 +55,8 @@ const Header = ({ sharedData, sharedBasicInfo, resumeBasicInfo }) => {
   const setTheme = () => {
     const dataThemeAttribute = "data-theme";
     const body = document.body;
-    const newTheme = body.getAttribute(dataThemeAttribute) === "dark" ? "light" : "dark";
+    const newTheme =
+      body.getAttribute(dataThemeAttribute) === "dark" ? "light" : "dark";
     body.setAttribute(dataThemeAttribute, newTheme);
   };
 
@@ -49,8 +65,8 @@ const Header = ({ sharedData, sharedBasicInfo, resumeBasicInfo }) => {
   }, [titles]);
 
   return (
-    <header id="home" style={{ height: window.innerHeight - 100, display: 'block' }}>
-      <div className="row aligner" style={{ height: '100%' }}>
+    <header id="home" style={{ height: window.innerHeight, display: "block" }}>
+      <div className="row aligner" style={{ height: "100%" }}>
         <div className="col-sm-12 col-md-4 mb-5">
           <div className="d-block">
             <div className="polaroid center">
@@ -62,22 +78,38 @@ const Header = ({ sharedData, sharedBasicInfo, resumeBasicInfo }) => {
           <div className="d-block">
             <div className="d-inline">
               <span style={{ cursor: "auto" }}>
-                <img height="120px" src={awsDeaBadge} alt="AWS Certified Data Engineer Associate" />
+                <img
+                  height="120px"
+                  src={awsDeaBadge}
+                  alt="AWS Certified Data Engineer Associate"
+                />
               </span>
             </div>
             <div className="d-inline">
               <span style={{ cursor: "auto" }}>
-                <img height="120px" src={awsDvaBadge} alt="AWS Certified Developer Associate" />
+                <img
+                  height="120px"
+                  src={awsDvaBadge}
+                  alt="AWS Certified Developer Associate"
+                />
               </span>
             </div>
             <div className="d-inline">
               <span style={{ cursor: "auto" }}>
-                <img height="120px" src={awsSaaBadge} alt="AWS Certified Solutions Architect Associate" />
+                <img
+                  height="120px"
+                  src={awsSaaBadge}
+                  alt="AWS Certified Solutions Architect Associate"
+                />
               </span>
             </div>
             <div className="d-inline">
               <span style={{ cursor: "auto" }}>
-                <img height="120px" src={azureAiBadge} alt="Microsoft Certified Azure AI Fundamentals" />
+                <img
+                  height="120px"
+                  src={azureAiBadge}
+                  alt="Microsoft Certified Azure AI Fundamentals"
+                />
               </span>
             </div>
           </div>
@@ -86,11 +118,23 @@ const Header = ({ sharedData, sharedBasicInfo, resumeBasicInfo }) => {
           <div className="col-md-12 d-block mb-5">
             <div className="card">
               <div className="card-header">
-                <span className="iconify" data-icon="emojione:red-circle" data-inline="false"></span>{" "}
+                <span
+                  className="iconify"
+                  data-icon="emojione:red-circle"
+                  data-inline="false"
+                ></span>{" "}
                 &nbsp;{" "}
-                <span className="iconify" data-icon="twemoji:yellow-circle" data-inline="false"></span>{" "}
+                <span
+                  className="iconify"
+                  data-icon="twemoji:yellow-circle"
+                  data-inline="false"
+                ></span>{" "}
                 &nbsp;{" "}
-                <span className="iconify" data-icon="twemoji:green-circle" data-inline="false"></span>
+                <span
+                  className="iconify"
+                  data-icon="twemoji:green-circle"
+                  data-inline="false"
+                ></span>
               </div>
               <div
                 className="card-body font-trebuchet text-justify ml-3 mr-3"
@@ -106,19 +150,23 @@ const Header = ({ sharedData, sharedBasicInfo, resumeBasicInfo }) => {
                 <br />
                 <br />
                 {about}
+                <br />
+                {networks}
               </div>
             </div>
           </div>
           <div className="col-md-12 d-block">
             <div>
-              <span className="iconify header-icon" data-icon="la:laptop-code" data-inline="false"></span>
+              <span
+                className="iconify header-icon"
+                data-icon="la:laptop-code"
+                data-inline="false"
+              ></span>
               <br />
               <h1 className="mb-0">
                 <Typical steps={[name]} wrapper="p" />
               </h1>
-              <div className="title-container">
-                {HeaderTitleTypeAnimation}
-              </div>
+              <div className="title-container">{HeaderTitleTypeAnimation}</div>
               <Switch
                 checked={checked}
                 onChange={onThemeSwitchChange}
@@ -165,7 +213,6 @@ const Header = ({ sharedData, sharedBasicInfo, resumeBasicInfo }) => {
       </div>
     </header>
   );
-
 };
 
 export default Header;
