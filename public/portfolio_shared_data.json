@@ -2,8 +2,10 @@
   "basic_info": {
     "name": "Chirag Kular",
     "titles": [
-      "Full stack Developer",
-      "Software Engineer"
+      "Front-End Engineer",
+      "Component Library Architect",
+      "Modern Web Developer",
+      "UI/UX Engineer"
     ],
     "social": [
       {
@@ -85,6 +87,21 @@
       {
         "name": "Tailwind CSS",
         "class": "devicon-tailwindcss-plain colored",
+        "level": "70"
+      },
+      {
+        "name": "Lit",
+        "class": "fab fa-fire colored",
+        "level": "75"
+      },
+      {
+        "name": "Storybook",
+        "class": "fab fa-book colored",
+        "level": "80"
+      },
+      {
+        "name": "Playwright",
+        "class": "fas fa-theater-masks colored",
         "level": "70"
       },
       {

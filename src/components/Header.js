@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from "react";
-import Typical from "react-typical";
+import { TypeAnimation } from "react-type-animation";
 import Switch from "react-switch";
 
 const Header = ({ sharedData, sharedBasicInfo, resumeBasicInfo }) => {
@@ -31,9 +31,7 @@ const Header = ({ sharedData, sharedBasicInfo, resumeBasicInfo }) => {
   useEffect(() => {
     if (sharedBasicInfo) {
       setName(sharedBasicInfo?.name);
-      setTitles(
-        sharedBasicInfo?.titles.map((x) => [x.toUpperCase(), 1500]).flat()
-      );
+      setTitles(sharedBasicInfo?.titles || []);
       setProfilePic("images/" + sharedBasicInfo.image);
       setAwsDvaBadge("images/" + sharedBasicInfo.certifications[0]);
       setAwsSaaBadge("images/" + sharedBasicInfo.certifications[1]);
@@ -61,7 +59,22 @@ const Header = ({ sharedData, sharedBasicInfo, resumeBasicInfo }) => {
   };
 
   const HeaderTitleTypeAnimation = useMemo(() => {
-    return <Typical className="title-styles" steps={titles} loop={50} />;
+    if (!titles || titles.length === 0) return null;
+    
+    const sequence = titles.reduce((acc, title) => {
+      acc.push(title.toUpperCase(), 1500);
+      return acc;
+    }, []);
+    
+    return (
+      <TypeAnimation
+        sequence={sequence}
+        wrapper="span"
+        speed={50}
+        className="title-styles"
+        repeat={Infinity}
+      />
+    );
   }, [titles]);
 
   return (
@@ -164,7 +177,12 @@ const Header = ({ sharedData, sharedBasicInfo, resumeBasicInfo }) => {
               ></span>
               <br />
               <h1 className="mb-0">
-                <Typical steps={[name]} wrapper="p" />
+                <TypeAnimation
+                  sequence={[name]}
+                  wrapper="p"
+                  speed={50}
+                  repeat={1}
+                />
               </h1>
               <div className="title-container">{HeaderTitleTypeAnimation}</div>
               <Switch
