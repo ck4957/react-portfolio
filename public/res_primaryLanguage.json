@@ -12,6 +12,33 @@
   },
   "projects": [
     {
+      "title": "Modern Component Library",
+      "startDate": "2025",
+      "description": "Built a comprehensive React component library with TypeScript, Storybook documentation, and Playwright testing. Features reusable components, custom hooks, and modern development patterns for scalable UI architecture.",
+      "images": [
+        "images/component-library.png"
+      ],
+      "url": "https://github.com/ck4957/react-portfolio",
+      "technologies": [
+        {
+          "class": "devicon-react-original colored",
+          "name": "React"
+        },
+        {
+          "class": "devicon-typescript-plain colored",
+          "name": "TypeScript"
+        },
+        {
+          "class": "fab fa-book colored",
+          "name": "Storybook"
+        },
+        {
+          "class": "fas fa-theater-masks colored",
+          "name": "Playwright"
+        }
+      ]
+    },
+    {
       "title": "Tip-Easy",
       "startDate": "2025",
       "description": "An iOS app that helps users quickly and easily calculate tips for their restaurant bills or services.",
