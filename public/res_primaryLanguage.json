@@ -1,7 +1,7 @@
 {
   "basic_info": {
     "description_header": "Hi 👋 I'm Chirag Kular",
-    "description": "Software Engineer with a Master's degree in Computer Science. 🚀 Seasoned Software Engineer |\n 6+ years of experience in HealthCare |  AWS Certified |\n Passionate about solving scalability and performance challenges | Lifelong learner and collaborator |\n Let's connect! 🌟",
+    "description": "Front-End Engineer with a Master's degree in Computer Science. 🚀 Specialized in building reusable web components and modern UI libraries | 6+ years of experience in HealthCare technology | Expert in Lit.dev, Storybook, Playwright & Component Architecture | AWS Certified | Passionate about creating scalable, accessible, and performant user experiences | Let's connect! 🌟",
     "section_name": {
       "about": "About me",
       "projects": "Projects",
@@ -11,6 +11,33 @@
     }
   },
   "projects": [
+    {
+      "title": "Modern Component Library",
+      "startDate": "2025",
+      "description": "Built a comprehensive React component library with TypeScript, Storybook documentation, and Playwright testing. Features reusable components, custom hooks, and modern development patterns for scalable UI architecture.",
+      "images": [
+        "images/component-library.png"
+      ],
+      "url": "https://github.com/ck4957/react-portfolio",
+      "technologies": [
+        {
+          "class": "devicon-react-original colored",
+          "name": "React"
+        },
+        {
+          "class": "devicon-typescript-plain colored",
+          "name": "TypeScript"
+        },
+        {
+          "class": "fab fa-book colored",
+          "name": "Storybook"
+        },
+        {
+          "class": "fas fa-theater-masks colored",
+          "name": "Playwright"
+        }
+      ]
+    },
     {
       "title": "Tip-Easy",
       "startDate": "2025",
