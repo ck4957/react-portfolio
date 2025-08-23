@@ -16,15 +16,7 @@ const ImageCarousel = ({ images }) => {
   
   return (
     <div className="relative bg-gray-900 rounded-lg overflow-hidden">
-      {/* Browser-style header */}
-      <div className="bg-gray-800 px-4 py-3 flex items-center gap-2">
-        <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-        <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
-        <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-        <div className="ml-4 text-gray-400 text-sm font-mono">
-          localhost:3000/project-demo
-        </div>
-      </div>
+     
       
       {/* Image container */}
       <div className="relative aspect-video bg-gray-100">
@@ -115,7 +107,7 @@ class ProjectDetailsModal extends Component {
       if (this.props.data.technologies) {
         tech = technologies.map((icons, i) => {
           return (
-            <span key={i} className="inline-flex items-center px-3 py-1 m-1 text-sm font-medium bg-blue-100 text-blue-800 rounded-full">
+            <span key={i} className="inline-flex items-center px-4 py-2 m-1 text-base font-medium bg-blue-100 text-blue-800 rounded-full">
               <i className={`${icons.class} mr-2`}></i>
               {icons.name}
             </span>

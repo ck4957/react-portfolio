@@ -27,14 +27,18 @@ const Navigation = () => {
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      // Use built-in scrollIntoView with the scroll-padding-top CSS handling the offset
+      element.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
       setIsOpen(false);
     }
   };
 
   const navItems = [
     { id: 'home', label: 'Home' },
-    { id: 'about', label: 'About' },
+    // { id: 'about', label: 'About' },
     { id: 'projects', label: 'Projects' },
     { id: 'skills', label: 'Skills' },
     { id: 'experience', label: 'Experience' },
@@ -76,8 +80,8 @@ const Navigation = () => {
             </div>
             
             {/* Theme Switch */}
-            <div className="flex items-center gap-2 ml-4">
-              <span className="text-sm text-gray-600">🌙</span>
+            {/* <div className="flex items-center gap-2 ml-4">
+              <span className="text-base text-gray-600">🌙</span>
               <Switch
                 checked={darkMode}
                 onChange={onThemeSwitchChange}
@@ -90,8 +94,8 @@ const Navigation = () => {
                 uncheckedIcon={false}
                 checkedIcon={false}
               />
-              <span className="text-sm text-gray-600">☀️</span>
-            </div>
+              <span className="text-base text-gray-600">☀️</span>
+            </div> */}
           </div>
 
           {/* Mobile menu button */}

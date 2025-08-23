@@ -15,14 +15,14 @@ class Experience extends Component {
 
         var mainTech = mainTechnologies.map((technology, i) => {
           return (
-            <span className="inline-block bg-primary-600 text-white text-md px-3 py-1 rounded-full mr-2 mb-2" key={i}>
+            <span className="inline-block bg-blue-600 text-white text-base px-4 py-2 rounded-full mr-2 mb-2 font-medium" key={i}>
               {technology}
             </span>
           );
         });
         var tech = technologies.map((technology, i) => {
           return (
-            <span className="inline-block bg-gray-200 text-gray-700 text-md px-3 py-1 rounded-full mr-2 mb-2" key={i}>
+            <span className="inline-block bg-gray-200 text-gray-700 text-base px-4 py-2 rounded-full mr-2 mb-2" key={i}>
               {technology}
             </span>
           );
@@ -32,11 +32,11 @@ class Experience extends Component {
             className="vertical-timeline-element--work"
             date={work.years}
             iconStyle={{
-              background: "#AE944F",
+              background: "#3b82f6",
               color: "#fff",
               textAlign: "center",
             }}
-            icon={<i className="fab fa-angular experience-icon"></i>}
+            icon={<i className="fas fa-briefcase experience-icon"></i>}
             key={i}
           >
             <div style={{ textAlign: "left", marginBottom: "4px" }}>
@@ -44,17 +44,27 @@ class Experience extends Component {
             </div>
 
             <h3
-              className="vertical-timeline-element-title"
+              className="vertical-timeline-element-title text-xl font-bold"
               style={{ textAlign: "left" }}
             >
               {work.title}
             </h3>
             <h4
-              className="vertical-timeline-element-subtitle"
+              className="vertical-timeline-element-subtitle text-lg font-semibold text-blue-600"
               style={{ textAlign: "left" }}
             >
               {work.company}
             </h4>
+            {work.location && (
+              <p className="text-base text-gray-600 mb-3" style={{ textAlign: "left" }}>
+                📍 {work.location}
+              </p>
+            )}
+            {work.description && (
+              <div className="text-gray-700 text-base leading-relaxed mb-4" style={{ textAlign: "left" }}>
+                {work.description}
+              </div>
+            )}
             <div style={{ textAlign: "left", marginTop: "15px" }}>{tech}</div>
           </VerticalTimelineElement>
         );
@@ -62,10 +72,10 @@ class Experience extends Component {
     }
 
     return (
-      <section id="resume" className="py-20 bg-white">
+      <section id="experience" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            <h1 className="text-5xl font-bold text-gray-900 mb-4">
               {sectionName}
             </h1>
           </div>

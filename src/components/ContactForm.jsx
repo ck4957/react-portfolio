@@ -57,10 +57,10 @@ const ContactForm = () => {
                 </div>
                 <div className="flex-1">
                   <h3 className="text-lg font-semibold text-gray-900 mb-1">Email</h3>
-                  <p className="text-gray-600 text-sm mb-3">Ready to discuss your next project</p>
+                  <p className="text-gray-600 text-base mb-3">Ready to discuss your next project</p>
                   <a 
                     href="mailto:kular_chirag@yahoo.com" 
-                    className="text-primary-600 hover:text-primary-700 font-medium text-sm"
+                    className="text-primary-600 hover:text-primary-700 font-medium text-base"
                   >
                     Send Message →
                   </a>
@@ -78,12 +78,12 @@ const ContactForm = () => {
                 </div>
                 <div className="flex-1">
                   <h3 className="text-lg font-semibold text-gray-900 mb-1">LinkedIn</h3>
-                  <p className="text-gray-600 text-sm mb-3">Let's connect professionally</p>
+                  <p className="text-gray-600 text-base mb-3">Let's connect professionally</p>
                   <a 
                     href="https://www.linkedin.com/in/kularchirag/" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-primary-600 hover:text-primary-700 font-medium text-sm"
+                    className="text-primary-600 hover:text-primary-700 font-medium text-base"
                   >
                     Connect Now →
                   </a>
@@ -101,10 +101,10 @@ const ContactForm = () => {
                 </div>
                 <div className="flex-1">
                   <h3 className="text-lg font-semibold text-gray-900 mb-1">Call</h3>
-                  <p className="text-gray-600 text-sm mb-3">Available for quick discussions</p>
+                  <p className="text-gray-600 text-base mb-3">Available for quick discussions</p>
                   <a 
                     href="tel:+1234567890" 
-                    className="text-primary-600 hover:text-primary-700 font-medium text-sm"
+                    className="text-primary-600 hover:text-primary-700 font-medium text-base"
                   >
                     Schedule Call →
                   </a>
@@ -117,7 +117,7 @@ const ContactForm = () => {
           <form onSubmit={handleSubmit} className="bg-white p-8 rounded-2xl shadow-sm">
             <div className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="name" className="block text-base font-medium text-gray-700 mb-2">
                   Your Name
                 </label>
                 <input
@@ -133,7 +133,7 @@ const ContactForm = () => {
               </div>
               
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="email" className="block text-base font-medium text-gray-700 mb-2">
                   Email Address
                 </label>
                 <input
@@ -149,7 +149,7 @@ const ContactForm = () => {
               </div>
               
               <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="subject" className="block text-base font-medium text-gray-700 mb-2">
                   Subject
                 </label>
                 <input
@@ -165,7 +165,7 @@ const ContactForm = () => {
               </div>
               
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="message" className="block text-base font-medium text-gray-700 mb-2">
                   Message
                 </label>
                 <textarea
@@ -212,7 +212,7 @@ const ContactForm = () => {
                   <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="text-green-700 text-sm">Thank you! Your message has been sent successfully.</span>
+                  <span className="text-green-700 text-base">Thank you! Your message has been sent successfully.</span>
                 </div>
               )}
               
@@ -221,7 +221,7 @@ const ContactForm = () => {
                   <svg className="w-5 h-5 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                   </svg>
-                  <span className="text-red-700 text-sm">Sorry, there was an error sending your message. Please try again.</span>
+                  <span className="text-red-700 text-base">Sorry, there was an error sending your message. Please try again.</span>
                 </div>
               )}
             </div>

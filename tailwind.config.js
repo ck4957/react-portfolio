@@ -21,6 +21,14 @@ export default defineConfig({
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
         heading: ["Raleway", "system-ui", "sans-serif"],
+        trebuchet: [
+          "Trebuchet MS",
+          "Lucida Sans Unicode",
+          "Lucida Grande",
+          "Lucida Sans",
+          "Arial",
+          "sans-serif",
+        ],
       },
       animation: {
         "fade-in-up": "fadeInUp 0.5s ease-out",

@@ -1,0 +1,152 @@
+// Essential styles that cannot be replaced with Tailwind CSS
+// Only includes complex components and specific styling requirements
+
+@use 'sass:color';
+
+// Experience Timeline Icon - specific sizing for react-vertical-timeline
+.experience-icon {
+	font-size: 200%;
+	margin-top: 25%;
+	text-align: center;
+}
+
+@media only screen and (max-width: 1170px) {
+	.experience-icon {
+		font-size: 140%;
+		margin-top: 27%;
+		text-align: center;
+	}
+}
+
+// Modal specific styles for ProjectDetailsModal
+.modal-inside .modal-content {
+	background: white;
+}
+
+.modal-close {
+	text-align: right;
+	padding: 10px 15px 10px 15px;
+	cursor: pointer;
+}
+
+.close-icon {
+	color: black;
+	font-weight: lighter !important;
+}
+
+.modal-description {
+	text-align: justify;
+	padding: 5px 5px 0 5px;
+	margin-bottom: 20px;
+	font-size: 12px;
+}
+
+// React Awesome Slider overrides (if still in use)
+.awssld__next {
+	outline: none !important;
+}
+
+.awssld__prev {
+	outline: none !important;
+}
+
+// Loader bar styling
+.loader-bar-color {
+	color: black !important;
+}
+
+// Portfolio item styling - complex hover effects
+.portfolio .portfolio-item .portfolio-item-caption {
+	-webkit-transition: all ease 0.5s;
+	-moz-transition: all ease 0.5s;
+	transition: all ease 0.5s;
+	opacity: 0;
+	background-color: rgba(51, 51, 51, 0.9);
+}
+
+.portfolio .portfolio-item .portfolio-item-caption:hover {
+	opacity: 1;
+}
+
+.portfolio .portfolio-item .portfolio-item-caption .portfolio-item-caption-content {
+	font-size: 1.5rem;
+}
+
+// React Typed cursor hiding
+.styles_typicalWrapper__1_Uvh::after {
+	cursor: none !important;
+	display: none;
+}
+
+// Badge styling for Experience component
+.main-badge {
+	font-size: 13px !important;
+	text-align: left !important;
+	padding: 5px 8px 5px 8px !important;
+	vertical-align: baseline;
+	background-color: #AE944F !important;
+	color: white;
+	font-weight: lighter !important;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.experience-badge {
+	font-size: 11px !important;
+	text-align: left !important;
+	padding: 5px 8px 5px 8px !important;
+	vertical-align: baseline;
+	background-color: #f9f5e9 !important;
+	color: black;
+	font-weight: lighter !important;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+// Timeline specific styling
+.vertical-timeline-element-date {
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+// Skills progress bars - complex animations
+.bars {
+	width: 95%;
+	float: left;
+	padding: 0;
+	text-align: left;
+}
+
+.bars .skills {
+	margin-top: 36px;
+	list-style: none;
+}
+
+.bars li {
+	position: relative;
+	margin-bottom: 60px;
+	background: #ccc;
+	height: 42px;
+	border-radius: 3px;
+}
+
+.bars li em {
+	font: 15px 'opensans-bold', sans-serif;
+	color: #313131;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: normal;
+	position: relative;
+	top: -36px;
+}
+
+.bar-expand {
+	position: absolute;
+	left: 0;
+	top: 0;
+	margin: 0;
+	padding-right: 24px;
+	background: #313131;
+	display: inline-block;
+	height: 42px;
+	line-height: 42px;
+	border-radius: 3px 0 0 3px;
+}

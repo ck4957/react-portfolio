@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import './App.scss';
+import './App-minimal.scss';
 import Navigation from './components/Navigation.jsx';
 import Header from './components/Header.jsx';
+import About from './components/About.jsx';
 import Footer from './components/Footer.jsx';
 import Experience from './components/Experience.jsx';
 import Projects from './components/Projects.jsx';
@@ -65,10 +66,6 @@ const App = () => {
     <Header sharedData={sharedData}
             resumeBasicInfo={resumeData.basic_info}
             sharedBasicInfo={sharedData.basic_info} />
-    {/* <About 
-      resumeBasicInfo={this.state.resumeData.basic_info}
-      sharedBasicInfo={this.state.sharedData.basic_info}
-    /> */}
     <Projects
       resumeProjects={resumeData.projects}
       resumeBasicInfo={resumeData.basic_info}
