@@ -1,7 +1,7 @@
 {
   "basic_info": {
     "description_header": "Hi 👋 I'm Chirag Kular",
-    "description": "Software Engineer with a Master's degree in Computer Science. 🚀 Seasoned Software Engineer |\n 6+ years of experience in HealthCare |  AWS Certified |\n Passionate about solving scalability and performance challenges | Lifelong learner and collaborator |\n Let's connect! 🌟",
+    "description": "Software Engineer with a Master's degree in Computer Science. 🚀 Specialized in building reusable web components and modern UI libraries | 7+ years of experience | Expert in Lit.dev, Storybook, Playwright & Component Architecture | AWS Certified | Passionate about creating scalable, accessible, and performant user experiences | Let's connect! 🌟",
     "section_name": {
       "about": "About me",
       "projects": "Projects",
@@ -197,8 +197,8 @@
   ],
   "experience": [
     {
-      "company": "Contract",
-      "title": "Software Engineer II",
+      "company": "TEKSystems",
+      "title": "Software Engineer II (Contract)",
       "years": "10.2024 - Present",
       "mainTech": [
         "Lit, Vite, HTML, CSS, Angular, Typsescript, Storybook"
