@@ -11,14 +11,29 @@ const Header = ({ sharedData, sharedBasicInfo, resumeBasicInfo }) => {
   const [awsDeaBadge, setAwsDeaBadge] = useState("");
   const [azureAiBadge, setAzureAiBadge] = useState("");
   const [name, setName] = useState("");
-  const [sectionName, setSectionName] = useState("");
+  //const [sectionName, setSectionName] = useState("");
   const [hello, setHello] = useState("");
   const [about, setAbout] = useState("");
+
+  if (sharedBasicInfo && sharedBasicInfo.social) {
+    var networks = sharedBasicInfo?.social?.map(function (network) {
+      console.log(network);
+      return (
+        <span key={network.name} className="m-4">
+          <a href={network.url} target="_blank" rel="noopener noreferrer">
+            <i className={network.class}></i>
+          </a>
+        </span>
+      );
+    });
+  }
 
   useEffect(() => {
     if (sharedBasicInfo) {
       setName(sharedBasicInfo?.name);
-      setTitles(sharedBasicInfo?.titles.map((x) => x.toUpperCase()));
+      setTitles(
+        sharedBasicInfo?.titles.map((x) => [x.toUpperCase(), 1500]).flat()
+      );
       setProfilePic("images/" + sharedBasicInfo.image);
       setAwsDvaBadge("images/" + sharedBasicInfo.certifications[0]);
       setAwsSaaBadge("images/" + sharedBasicInfo.certifications[1]);
@@ -26,7 +41,7 @@ const Header = ({ sharedData, sharedBasicInfo, resumeBasicInfo }) => {
       setAzureAiBadge("images/" + sharedBasicInfo.certifications[3]);
     }
     if (resumeBasicInfo) {
-      setSectionName(resumeBasicInfo.section_name.about);
+      //setSectionName(resumeBasicInfo.section_name.about);
       setHello(resumeBasicInfo.description_header);
       setAbout(resumeBasicInfo.description);
     }
@@ -56,10 +71,7 @@ const Header = ({ sharedData, sharedBasicInfo, resumeBasicInfo }) => {
   );
 
   return (
-    <header
-      id="home"
-      style={{ height: window.innerHeight - 100, display: "block" }}
-    >
+    <header id="home" style={{ height: window.innerHeight, display: "block" }}>
       <div className="row aligner" style={{ height: "100%" }}>
         <div className="col-sm-12 col-md-4 mb-5">
           <div className="d-block">
@@ -144,6 +156,8 @@ const Header = ({ sharedData, sharedBasicInfo, resumeBasicInfo }) => {
                 <br />
                 <br />
                 {about}
+                <br />
+                {networks}
               </div>
             </div>
           </div>
@@ -163,7 +177,7 @@ const Header = ({ sharedData, sharedBasicInfo, resumeBasicInfo }) => {
                   loop={false}
                 />
               </h1>
-              <div className="title-container">{headerTitleAnimation}</div>
+              <div className="title-container">{HeaderTitleTypeAnimation}</div>
               <Switch
                 checked={checked}
                 onChange={onThemeSwitchChange}
