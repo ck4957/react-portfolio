@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import './App.scss';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Experience from './components/Experience';
-import Projects from './components/Projects';
-import Skills from './components/Skills';
+import Navigation from './components/Navigation.jsx';
+import Header from './components/Header.jsx';
+import Footer from './components/Footer.jsx';
+import Experience from './components/Experience.jsx';
+import Projects from './components/Projects.jsx';
+import Skills from './components/Skills.jsx';
+import ContactForm from './components/ContactForm.jsx';
 
 const App = () => {
   const [sharedData, setSharedData] = useState({});
@@ -59,6 +61,7 @@ const App = () => {
 
   return (
     <div>
+    <Navigation />
     <Header sharedData={sharedData}
             resumeBasicInfo={resumeData.basic_info}
             sharedBasicInfo={sharedData.basic_info} />
@@ -78,6 +81,7 @@ const App = () => {
       resumeExperience={resumeData.experience}
       resumeBasicInfo={resumeData.basic_info}
     />
+    <ContactForm />
     <Footer sharedBasicInfo={sharedData.basic_info} />
   </div>
 );

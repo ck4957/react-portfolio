@@ -1,0 +1,141 @@
+// Navigation.scss
+.modern-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(var(--card-bg-rgb), 0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-color);
+  z-index: 1000;
+  transition: all 0.3s ease;
+  
+  &.scrolled {
+    box-shadow: var(--shadow-card);
+  }
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+.nav-logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 32px;
+  
+  @media (max-width: 768px) {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: var(--card-bg);
+    flex-direction: column;
+    padding: 20px;
+    gap: 16px;
+    box-shadow: var(--shadow-card);
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+    
+    &.open {
+      transform: translateY(0);
+    }
+  }
+}
+
+.nav-link {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  position: relative;
+  
+  &:hover,
+  &.active {
+    color: var(--primary-color);
+    background: rgba(var(--primary-rgb), 0.1);
+  }
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: all 0.2s ease;
+    transform: translateX(-50%);
+  }
+  
+  &:hover::after,
+  &.active::after {
+    width: 24px;
+  }
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  
+  @media (max-width: 768px) {
+    display: flex;
+  }
+  
+  span {
+    width: 24px;
+    height: 2px;
+    background: var(--text-primary);
+    margin: 3px 0;
+    transition: 0.3s;
+    
+    &:nth-child(1) {
+      transform-origin: top left;
+    }
+    
+    &:nth-child(3) {
+      transform-origin: bottom left;
+    }
+  }
+  
+  &.open span {
+    &:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    &:nth-child(2) {
+      opacity: 0;
+    }
+    
+    &:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -6px);
+    }
+  }
+}
