@@ -253,7 +253,7 @@
     {
       "company": "MatrixCare",
       "title": "Software Engineer",
-      "years": "09.2020 - 06.2023",
+      "years": "08.2018 - 06.2023",
       "location": "Minneapolis, MN",
       "description": "Drove significant improvements to MatrixCare's SNF EHR platform serving 10,000+ healthcare facilities nationwide. Delivered Medication Reconciliation feature that increased patient re-admission efficiency by 50%, reducing manual processing time from 45 minutes to 20 minutes per patient. Enhanced Labsoft integration with new HL7 fields, improving lab data accuracy and reducing data entry errors. Led Gainsight implementation tracking 100K+ monthly user interactions, resulting in 35% improvement in user engagement and 25% reduction in support tickets. Pioneered micro-frontend POC that enabled independent team development. Mentored 2 interns on Okta authorization system, delivering production-ready AWS Lambda solution. Developed 30+ Crystal Reports providing critical patient insights to providers, supporting $500M+ in annual revenue decisions. Optimized SQL procedures reducing query execution time by 70%, improving system performance for 50,000+ daily users.",
       "mainTech": [
