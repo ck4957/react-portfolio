@@ -37,12 +37,12 @@ const ShaderBackground = () => {
       uniform float u_time;
 
       float bayer2(vec2 coord) {
-        float pattern[4];
-        pattern[0] = 0.0; pattern[1] = 2.0;
-        pattern[2] = 3.0; pattern[3] = 1.0;
         int x = int(mod(coord.x, 2.0));
         int y = int(mod(coord.y, 2.0));
-        return pattern[x + y * 2] / 4.0;
+        if (x == 0 && y == 0) return 0.0 / 4.0;
+        if (x == 1 && y == 0) return 2.0 / 4.0;
+        if (x == 0 && y == 1) return 3.0 / 4.0;
+        return 1.0 / 4.0;
       }
 
       float noise(vec2 p) {
