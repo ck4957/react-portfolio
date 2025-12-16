@@ -1,3 +1,4 @@
+@mixin generate-styles {
 $root-element: 'awssld';
 $cos45: 0.7071;
 $transition-bezier: cubic-bezier(0.5, 0.075, 0.25, 0.95);
@@ -474,4 +475,5 @@ $content-background-color: #8C8C8C;
   to {
     transform: translate3d(100%, 0, 0);
   }
+}
 }

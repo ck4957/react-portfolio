@@ -1,6 +1,8 @@
+@use '../dark-slider';
+
 body[data-theme="dark"] {  
 
-   @import './../dark-slider.scss';
+   @include dark-slider.generate-styles;
 
    .slider-tab {
       background-color: #8C8C8C;

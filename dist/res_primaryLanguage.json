@@ -1,0 +1,325 @@
+{
+  "basic_info": {
+    "description_header": "Hi 👋 I'm Chirag Kular",
+    "description": "Software Engineer with a Master's degree in Computer Science. 🚀 Specialized in building reusable web components and modern UI libraries | 7+ years of experience | Expert in Lit.dev, Storybook, Playwright & Component Architecture | AWS Certified | Passionate about creating scalable, accessible, and performant user experiences | Let's connect! 🌟",
+    "section_name": {
+      "about": "About me",
+      "projects": "Projects",
+      "skills": "Skills",
+      "tools": "Tools",
+      "experience": "Experience"
+    }
+  },
+  "projects": [
+    {
+      "title": "Tip-Easy",
+      "startDate": "2025",
+      "description": "An iOS app that helps users quickly and easily calculate tips for their restaurant bills or services.",
+      "images": [
+        "images/TipEasy1.png",
+        "images/TipEasy2.png",
+        "images/TipEasy3.png"
+      ],
+      "url": "https://apps.apple.com/us/app/tip-easy/id6741721331",
+      "technologies": [
+        {
+          "class": "devicon-swift-plain colored",
+          "name": "Swift"
+        },
+        {
+          "class": "devicon-xcode-plain colored",
+          "name": "Xcode"
+        },
+        {
+          "class": "devicon-apple-original",
+          "name": "iOS"
+        }
+      ]
+    },
+    {
+      "title": "MemoCardFlip",
+      "startDate": "2025",
+      "description": "A memory card game for iOS where users flip cards to match pairs, challenging their memory skills.",
+      "images": [
+        "images/MemoCardFlip1.png",
+        "images/MemoCardFlip2.png"
+      ],
+      "url": "https://apps.apple.com/us/app/memocardflip/id6742595725",
+      "technologies": [
+        {
+          "class": "devicon-swift-plain colored",
+          "name": "Swift"
+        },
+        {
+          "class": "devicon-xcode-plain colored",
+          "name": "Xcode"
+        },
+        {
+          "class": "devicon-apple-original",
+          "name": "iOS"
+        }
+      ]
+    },
+    {
+      "title": "Angular Store",
+      "startDate": "Nov-2023",
+      "description": "Created a E-commerce store list products in various categories and add to cart and checkout using Angular.Typescript, Express and Stripe.",
+      "images": [
+        "images/AngularStore.png"
+      ],
+      "url": "https://angular-store-weld.vercel.app/home",
+      "technologies": [
+        {
+          "class": "devicon-angularjs-plain",
+          "name": "AngularJs"
+        },
+        {
+          "class": "devicon-express-original-wordmark",
+          "name": "Express"
+        },
+        {
+          "class": "tailwindcss-original-wordmark",
+          "name": "TailwindCSS"
+        },
+        {
+          "class": "devicon-materialui-plain",
+          "name": "Angular Material"
+        }
+      ]
+    },
+    {
+      "title": "Housing App",
+      "startDate": "Oct-2023",
+      "description": "Created a Next.js app to add and list houses for sale with shared components, hooks and deployed on Vercel.",
+      "images": [
+        "images/housingApp.jpg"
+      ],
+      "url": "https://ps-react-housing-app.vercel.app/",
+      "technologies": [
+        {
+          "class": "devicon-nextjs-original colored",
+          "name": "Next.js"
+        },
+        {
+          "class": "devicon-react-original-wordmark colored",
+          "name": "React"
+        }
+      ]
+    },
+    {
+      "title": "Team member allocation",
+      "startDate": "2022",
+      "description": "Created this project to learn React, functional components, routing, fetching data from API.",
+      "images": [
+        "images/teamMember.jpg"
+      ],
+      "url": "https://team-member.vercel.app",
+      "technologies": [
+        {
+          "class": "devicon-react-original-wordmark colored",
+          "name": "React"
+        },
+        {
+          "class": "devicon-bootstrap-plain",
+          "name": "Bootstrap"
+        }
+      ]
+    },
+    {
+      "title": "Alexa in Mixed Reality",
+      "startDate": "2018",
+      "description": "Developed a hologram of Alexa in Unity3D for HoloLens and integrated Alexa Voice Service in it. Integrated an Alexa skill to find emotion in the tone of headlines from News API by integrating IBM Watson’s Tone Analyzer.",
+      "images": [
+        "images/alexa1.jpg",
+        "images/alexa2.jpg",
+        "images/alexa3.jpeg"
+      ],
+      "url": "https://www.rit.edu/news/student-spotlight-creating-holo-assistant",
+      "technologies": [
+        {
+          "class": "devicon-csharp-plain",
+          "name": "C#"
+        },
+        {
+          "class": "devicon-python-plain",
+          "name": "Python"
+        }
+      ]
+    },
+    {
+      "title": "BOSTON AIRBNB BOOKING SYSTEM",
+      "startDate": "2017",
+      "description": "Designed a web application which takes Boston Airbnb dataset, store it in MongoDB and performed CRUD. Client-side designed using Bootstrap, Angular UI and templating for dynamic views and server-side using Express.js.",
+      "images": [
+        "images/airbnb1.png",
+        "images/airbnb2.png",
+        "images/airbnb3.png",
+        "images/airbnb4.png"
+      ],
+      "url": "",
+      "technologies": [
+        {
+          "class": "devicon-angularjs-plain",
+          "name": "AngularJs"
+        },
+        {
+          "class": "devicon-javascript-plain",
+          "name": "JavaScript"
+        },
+        {
+          "class": "devicon-python-plain",
+          "name": "Python"
+        }
+      ]
+    },
+    {
+      "title": "PROGRAMMABLE WEB QUERY SYSTEM",
+      "startDate": "2016",
+      "description": "Created an application that parsed programmable Web API’s data using Python and stored it in MongoDB. Designed a search page using AngularJS and Flask framework to search relevant APIs from the stored data",
+      "images": [
+        "images/webServices1.jpg"
+      ],
+      "technologies": [
+        {
+          "class": "devicon-angularjs-plain",
+          "name": "AngularJS"
+        },
+        {
+          "class": "devicon-bootstrap-plain",
+          "name": "Bootstrap"
+        },
+        {
+          "class": "devicon-html5-plain",
+          "name": "HTML5"
+        }
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "company": "M&T Bank (via TEKsystems)",
+      "title": "Software Engineer",
+      "years": "10.2024 - Present",
+      "location": "Buffalo, NY (Remote)",
+      "description": "Contributing to M&T Bank's digital transformation by building enterprise-scale web components and design systems. Developing reusable UI components that reduce development time by 40% across multiple teams, ensuring consistent user experience across 200+ internal applications. Implementing accessibility standards (WCAG 2.1 AA) to ensure compliance for 8 million+ customer interactions. Optimizing component performance resulting in 25% faster page load times and improved developer productivity through comprehensive Storybook documentation and automated testing with Jest.",
+      "mainTech": [
+        "Lit, Vite, HTML, CSS, Angular, TypeScript, Storybook"
+      ],
+      "technologies": [
+        "HTML",
+        "JavaScript",
+        "SCSS",
+        "Storybook",
+        "Lit",
+        "TypeScript",
+        "Angular",
+        "Vite",
+        "Supernova",
+        "Jest",
+        "Web Components",
+        "Gitlab",
+        "CI/CD",
+        "Open Web Components",
+        "OpenShift"
+      ]
+    },
+    {
+      "company": "ICF",
+      "title": "Senior Software Engineer",
+      "years": "07.2023 - 10.2024",
+      "location": "Buffalo, NY (Remote)",
+      "description": "Delivered critical healthcare data infrastructure supporting the CMS EOM & GUIDE models. Built and optimized FHIR-compliant microservices processing 50K+ patient records, improving data interoperability by 75% and reducing processing time from hours to minutes. Implemented AWS cloud solutions (Lambda, S3, EKS) that achieved 99.9%. Enhanced system reliability and security for sensitive healthcare data, ensuring HIPAA compliance and enabling real-time analytics that improved patient care outcomes for beneficiaries.",
+      "mainTech": [
+        "FHIR, NodeJS, AWS, TypeScript"
+      ],
+      "technologies": [
+        "FHIR",
+        "NodeJS",
+        "TypeScript",
+        "JavaScript",
+        "Jest",
+        "Microservices",
+        "AWS S3",
+        "AWS Lambda",
+        "AWS EKS",
+        "AWS Step Functions",
+        "Splunk",
+        "Python",
+        "Docker",
+        "Healthcare Data",
+        "CMS"
+      ]
+    },
+    {
+      "company": "MatrixCare",
+      "title": "Software Engineer",
+      "years": "08.2018 - 06.2023",
+      "location": "Minneapolis, MN",
+      "description": "Drove significant improvements to MatrixCare's SNF EHR platform serving 10,000+ healthcare facilities nationwide. Delivered Medication Reconciliation feature that increased patient re-admission efficiency by 50%, reducing manual processing time from 45 minutes to 20 minutes per patient. Enhanced Labsoft integration with new HL7 fields, improving lab data accuracy and reducing data entry errors. Led Gainsight implementation tracking 100K+ monthly user interactions, resulting in 35% improvement in user engagement and 25% reduction in support tickets. Pioneered micro-frontend POC that enabled independent team development. Mentored 2 interns on Okta authorization system, delivering production-ready AWS Lambda solution. Developed 30+ Crystal Reports providing critical patient insights to providers, supporting $500M+ in annual revenue decisions. Optimized SQL procedures reducing query execution time by 70%, improving system performance for 50,000+ daily users.",
+      "mainTech": [
+        "Angular, Java, SQL, React"
+      ],
+      "technologies": [
+        "Java",
+        "Angular",
+        "React",
+        "TypeScript",
+        "JavaScript",
+        "SQL Server",
+        "REST API",
+        "NPM",
+        "Bootstrap",
+        ".NET Core",
+        "HL7",
+        "SAP Crystal Reports",
+        "Gainsight",
+        "Okta",
+        "Python Flask",
+        "AWS Lambda",
+        "Micro-frontends",
+        "JUnit",
+        "SNF EHR"
+      ]
+    },
+    {
+      "company": "MatrixCare",
+      "title": "Developer Intern",
+      "years": "01.2018 - 05.2018",
+      "location": "Minneapolis, MN",
+      "description": "Developed chatbot solutions using Microsoft LUIS.ai for natural language processing, implemented front-end interfaces with jQuery and modern web technologies, and contributed to various development projects while gaining hands-on experience in enterprise software development.",
+      "mainTech": [
+        "Java, jQuery, LUIS.ai"
+      ],
+      "technologies": [
+        "Java",
+        "jQuery",
+        "LUIS.ai",
+        "Microsoft Cognitive Services",
+        "HTML5",
+        "CSS3",
+        "Bootstrap",
+        "JavaScript"
+      ]
+    },
+    {
+      "company": "MatrixCare",
+      "title": "Developer Intern",
+      "years": "08.2017 - 09.2017",
+      "location": "Minneapolis, MN",
+      "description": "Contributed to critical healthcare software development projects, improving user interface responsiveness by 30%. Enhanced user experience through modern web development practices using AngularJS and Bootstrap, while learning enterprise-level software development methodologies and gaining foundational experience in full-stack development.",
+      "mainTech": [
+        "AngularJS, Bootstrap, C#, SQL"
+      ],
+      "technologies": [
+        "AngularJS",
+        "C#",
+        "SQL",
+        ".NET Framework",
+        "ASP.NET",
+        "HTML5",
+        "CSS3",
+        "Bootstrap"
+      ]
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 
-@import './scss/themes/theme-dark.scss';
-@import './scss/themes/theme-light.scss';
+@use './scss/themes/theme-dark';
+@use './scss/themes/theme-light';
+@use "sass:color";
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300&display=swap');
 
 html {
@@ -66,7 +67,7 @@ header {
 }
 
 .skills-tile {
-	background-color: transparentize(#F8F5F4, 0.95);
+	background-color: color.scale(#F8F5F4, $alpha: -95%);
 	padding: 10px 10px 5px 10px;
 	width: 100px;
 	margin: 5px 0 5px 0;
