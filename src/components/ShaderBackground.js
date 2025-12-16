@@ -9,7 +9,7 @@ const ShaderBackground = () => {
 
     const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
     if (!gl) {
-      console.error('WebGL not supported');
+      console.warn('WebGL not supported, shader background will not render');
       return;
     }
 
@@ -33,8 +33,16 @@ const ShaderBackground = () => {
     // Fragment shader with dithering
     const fragmentShaderSource = `
       precision mediump float;
+      // Animation parameters
       uniform vec2 u_resolution;
       uniform float u_time;
+
+      // Shader constants
+      const float TIME_SCALE = 0.15;
+      const float PATTERN_SCALE = 3.0;
+      const float WAVE_AMPLITUDE = 0.1;
+      const float DITHER_STRENGTH = 0.15;
+      const float COLOR_QUANTIZATION = 6.0;
 
       float bayer2(vec2 coord) {
         int x = int(mod(coord.x, 2.0));
@@ -64,8 +72,8 @@ const ShaderBackground = () => {
         vec2 uv = gl_FragCoord.xy / u_resolution.xy;
         vec2 coord = gl_FragCoord.xy;
         
-        float t = u_time * 0.15;
-        vec2 p = uv * 3.0 + vec2(t * 0.1, t * 0.05);
+        float t = u_time * TIME_SCALE;
+        vec2 p = uv * PATTERN_SCALE + vec2(t * 0.1, t * 0.05);
         
         float n1 = fbm(p);
         float n2 = fbm(p * 2.0 + vec2(t * 0.2, -t * 0.15));
@@ -73,13 +81,13 @@ const ShaderBackground = () => {
         
         float pattern = n1 * 0.5 + n2 * 0.3 + n3 * 0.2;
         
-        float wave = sin(uv.x * 10.0 + t) * cos(uv.y * 8.0 - t * 0.5) * 0.1;
+        float wave = sin(uv.x * 10.0 + t) * cos(uv.y * 8.0 - t * 0.5) * WAVE_AMPLITUDE;
         pattern += wave;
         
         float dither = bayer2(coord);
-        pattern += (dither - 0.5) * 0.15;
+        pattern += (dither - 0.5) * DITHER_STRENGTH;
         
-        pattern = floor(pattern * 6.0) / 6.0;
+        pattern = floor(pattern * COLOR_QUANTIZATION) / COLOR_QUANTIZATION;
         
         vec3 color1 = vec3(0.05, 0.05, 0.08);
         vec3 color2 = vec3(0.08, 0.12, 0.18);

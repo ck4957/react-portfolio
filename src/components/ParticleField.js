@@ -3,6 +3,12 @@ import './ParticleField.scss';
 
 const ParticleField = () => {
   const canvasRef = useRef(null);
+  
+  // Configuration constants
+  const MAX_PARTICLES = 100;
+  const PARTICLE_DENSITY = 10000; // pixels per particle
+  const CONNECTION_DISTANCE = 150;
+  const CONNECTION_OPACITY = 0.1;
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -60,7 +66,7 @@ const ParticleField = () => {
     }
 
     // Create particles
-    const particleCount = Math.min(100, Math.floor(canvas.width * canvas.height / 10000));
+    const particleCount = Math.min(MAX_PARTICLES, Math.floor(canvas.width * canvas.height / PARTICLE_DENSITY));
     for (let i = 0; i < particleCount; i++) {
       particles.push(new Particle());
     }
@@ -81,11 +87,11 @@ const ParticleField = () => {
           const dy = p1.y - p2.y;
           const distance = Math.sqrt(dx * dx + dy * dy);
 
-          if (distance < 150) {
+          if (distance < CONNECTION_DISTANCE) {
             ctx.beginPath();
             ctx.moveTo(p1.x, p1.y);
             ctx.lineTo(p2.x, p2.y);
-            const opacity = (1 - distance / 150) * 0.1;
+            const opacity = (1 - distance / CONNECTION_DISTANCE) * CONNECTION_OPACITY;
             ctx.strokeStyle = `rgba(160, 160, 255, ${opacity})`;
             ctx.lineWidth = 0.5;
             ctx.stroke();
