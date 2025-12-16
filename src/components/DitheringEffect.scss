@@ -1,0 +1,85 @@
+// Dithering effect styles
+.dithering-container {
+  position: relative;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    mix-blend-mode: overlay;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  &:hover::before {
+    opacity: 1;
+  }
+}
+
+.dithering-light::before {
+  background-image: 
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 1px,
+      rgba(255, 255, 255, 0.03) 1px,
+      rgba(255, 255, 255, 0.03) 2px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 1px,
+      rgba(255, 255, 255, 0.03) 1px,
+      rgba(255, 255, 255, 0.03) 2px
+    );
+  opacity: 0.3;
+}
+
+.dithering-medium::before {
+  background-image: 
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 2px,
+      rgba(255, 255, 255, 0.05) 2px,
+      rgba(255, 255, 255, 0.05) 4px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 2px,
+      rgba(255, 255, 255, 0.05) 2px,
+      rgba(255, 255, 255, 0.05) 4px
+    );
+  opacity: 0.4;
+}
+
+.dithering-heavy::before {
+  background: 
+    repeating-conic-gradient(
+      from 0deg,
+      rgba(255, 255, 255, 0.08) 0deg 90deg,
+      transparent 90deg 180deg
+    );
+  background-size: 8px 8px;
+  opacity: 0.5;
+}
+
+// Animated dithering effect
+@keyframes dither-scan {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+  100% {
+    background-position: 8px 8px, -8px -8px;
+  }
+}
+
+.dithering-animated::before {
+  animation: dither-scan 2s linear infinite;
+}
