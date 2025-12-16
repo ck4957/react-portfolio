@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useMemo } from "react";
 import Typical from "react-typical";
 import Switch from "react-switch";
+import DitheringEffect from "./DitheringEffect";
 
 const Header = ({ sharedData, sharedBasicInfo, resumeBasicInfo }) => {
-  const [checked, setChecked] = useState(false);
+  const [checked, setChecked] = useState(true);
   const [titles, setTitles] = useState([]);
   const [profilePic, setProfilePic] = useState("");
   const [awsDvaBadge, setAwsDvaBadge] = useState("");
@@ -116,44 +117,46 @@ const Header = ({ sharedData, sharedBasicInfo, resumeBasicInfo }) => {
         </div>
         <div className="col-sm-12 col-md-7">
           <div className="col-md-12 d-block mb-5">
-            <div className="card">
-              <div className="card-header">
-                <span
-                  className="iconify"
-                  data-icon="emojione:red-circle"
-                  data-inline="false"
-                ></span>{" "}
-                &nbsp;{" "}
-                <span
-                  className="iconify"
-                  data-icon="twemoji:yellow-circle"
-                  data-inline="false"
-                ></span>{" "}
-                &nbsp;{" "}
-                <span
-                  className="iconify"
-                  data-icon="twemoji:green-circle"
-                  data-inline="false"
-                ></span>
+            <DitheringEffect intensity="medium">
+              <div className="card">
+                <div className="card-header">
+                  <span
+                    className="iconify"
+                    data-icon="emojione:red-circle"
+                    data-inline="false"
+                  ></span>{" "}
+                  &nbsp;{" "}
+                  <span
+                    className="iconify"
+                    data-icon="twemoji:yellow-circle"
+                    data-inline="false"
+                  ></span>{" "}
+                  &nbsp;{" "}
+                  <span
+                    className="iconify"
+                    data-icon="twemoji:green-circle"
+                    data-inline="false"
+                  ></span>
+                </div>
+                <div
+                  className="card-body font-trebuchet text-justify ml-3 mr-3"
+                  style={{
+                    height: "auto",
+                    fontSize: "132%",
+                    lineHeight: "200%",
+                    whiteSpace: "pre-wrap",
+                  }}
+                >
+                  <br />
+                  <span className="wave">{hello} :) </span>
+                  <br />
+                  <br />
+                  {about}
+                  <br />
+                  {networks}
+                </div>
               </div>
-              <div
-                className="card-body font-trebuchet text-justify ml-3 mr-3"
-                style={{
-                  height: "auto",
-                  fontSize: "132%",
-                  lineHeight: "200%",
-                  whiteSpace: "pre-wrap",
-                }}
-              >
-                <br />
-                <span className="wave">{hello} :) </span>
-                <br />
-                <br />
-                {about}
-                <br />
-                {networks}
-              </div>
-            </div>
+            </DitheringEffect>
           </div>
           <div className="col-md-12 d-block">
             <div>

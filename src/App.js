@@ -5,6 +5,8 @@ import Footer from './components/Footer';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
+import ShaderBackground from './components/ShaderBackground';
+import ParticleField from './components/ParticleField';
 
 const App = () => {
   const [sharedData, setSharedData] = useState({});
@@ -59,6 +61,8 @@ const App = () => {
 
   return (
     <div>
+    <ShaderBackground />
+    <ParticleField />
     <Header sharedData={sharedData}
             resumeBasicInfo={resumeData.basic_info}
             sharedBasicInfo={sharedData.basic_info} />
