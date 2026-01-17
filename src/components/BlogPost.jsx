@@ -85,9 +85,123 @@ const BlogPost = ({ slug }) => {
           {post.demoType === 'interactive' && post.slug === 'figma-code-connect' && (
             <FigmaCodeConnectDemo />
           )}
+
+          {post.demoType === 'interactive' && post.slug === 'med-charting-sidebar' && (
+            <MedChartingSidebarDemo />
+          )}
         </div>
       </article>
     </section>
+  );
+};
+
+const MedChartingSidebarDemo = () => {
+  const [sidebarOpen, setSidebarOpen] = React.useState(true);
+  const [chartedMeds, setChartedMeds] = React.useState([]);
+
+  const medications = [
+    { id: 1, name: 'Aspirin', dose: '81 mg', time: '09:00 AM', type: 'Oral' },
+    { id: 2, name: 'Warfarin', dose: '1 mg', time: '10:00 AM', type: 'Oral' },
+    { id: 3, name: 'Celecoxib', dose: '200 mg', time: '07:00 AM', type: 'Oral' },
+    { id: 4, name: 'Metformin', dose: '500 mg', time: '08:00 AM', type: 'Oral' },
+    { id: 5, name: 'Lisinopril', dose: '10 mg', time: '09:00 AM', type: 'Oral' },
+    { id: 6, name: 'Atorvastatin', dose: '20 mg', time: '09:00 PM', type: 'Oral' }
+  ];
+
+  const unchartedMeds = medications.filter(m => !chartedMeds.includes(m.id));
+  const charted = medications.filter(m => chartedMeds.includes(m.id));
+
+  const handleChart = (medId) => {
+    setChartedMeds([...chartedMeds, medId]);
+  };
+
+  return (
+    <div className="med-charting-demo">
+      <h2 className="demo-heading">💊 Live Demo: Medication Sidebar</h2>
+      <p className="demo-description">
+        See how the persistent sidebar solves the scrolling problem. Try charting medications to see progress tracked in real-time!
+      </p>
+
+      <div className="med-demo-container">
+        <div className="med-main-area">
+          <div className="med-header">
+            <h3>Scheduled Medications</h3>
+            <span className="med-count">{unchartedMeds.length} remaining</span>
+          </div>
+          
+          <div className="med-list">
+            {unchartedMeds.length === 0 ? (
+              <div className="med-complete">
+                <div className="med-complete-icon">✓</div>
+                <p>All medications charted!</p>
+              </div>
+            ) : (
+              unchartedMeds.map(med => (
+                <div key={med.id} className="med-card">
+                  <div className="med-card-header">
+                    <strong>{med.name}</strong>
+                    <span className="med-time">{med.time}</span>
+                  </div>
+                  <div className="med-card-body">
+                    <p><strong>Dose:</strong> {med.dose}</p>
+                    <p><strong>Route:</strong> {med.type}</p>
+                  </div>
+                  <button 
+                    className="med-chart-btn"
+                    onClick={() => handleChart(med.id)}
+                  >
+                    Chart Medication
+                  </button>
+                </div>
+              ))
+            )}
+          </div>
+        </div>
+
+        <div className={`med-sidebar ${sidebarOpen ? 'open' : 'closed'}`}>
+          <div className="med-sidebar-header">
+            <h4>Charted ({chartedMeds.length})</h4>
+            <button 
+              className="med-sidebar-toggle"
+              onClick={() => setSidebarOpen(!sidebarOpen)}
+            >
+              {sidebarOpen ? '→' : '←'}
+            </button>
+          </div>
+          
+          {sidebarOpen && (
+            <div className="med-sidebar-content">
+              {chartedMeds.length === 0 ? (
+                <p className="med-sidebar-empty">No medications charted yet</p>
+              ) : (
+                <div className="med-sidebar-list">
+                  {charted.map(med => (
+                    <div key={med.id} className="med-sidebar-item">
+                      <span className="med-sidebar-check">✓</span>
+                      <div className="med-sidebar-info">
+                        <div className="med-sidebar-name">{med.name}</div>
+                        <div className="med-sidebar-details">{med.dose} • {med.time}</div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          )}
+        </div>
+      </div>
+
+      <div className="med-demo-insights">
+        <div className="insight-box success">
+          <strong>✓ Key Benefit: No More Scrolling</strong>
+          <p>The sidebar stays visible while you chart, providing instant visual confirmation without losing your place</p>
+        </div>
+        <div className="insight-box info">
+          <strong>💡 Built with Existing Data</strong>
+          <p>Frontend already tracked charting state—we just displayed it differently. No backend changes needed.</p>
+        </div>
+      </div>
+    </div>
   );
 };
 
