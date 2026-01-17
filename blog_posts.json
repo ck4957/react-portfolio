@@ -19,7 +19,12 @@
             "sections": [
                 {
                     "heading": "The Problem: Death by Scrolling",
-                    "text": "Our initial design seemed logical: show all medication details in cards. But we quickly learned that nurses weren't just reading—they were tracking progress. As they charted medications, those cards moved to the bottom of the list. To verify what they'd completed, they had to scroll down, losing sight of what still needed attention. This constant context-switching was exhausting and error-prone."
+                    "text": "Our initial design seemed logical: show all medication details in cards. But we quickly learned that nurses weren't just reading—they were tracking progress. As they charted medications, those cards moved to the bottom of the list. To verify what they'd completed, they had to scroll down, losing sight of what still needed attention. This constant context-switching was exhausting and error-prone.",
+                    "image": {
+                        "src": "https://emrfinder.com/wp-content/uploads/2019/04/MatrixCare-EMR-Software-FlowSheets.webp",
+                        "alt": "Example of a typical EMR medication flowsheet showing the complexity nurses navigate",
+                        "caption": "Typical EMR flowsheet — nurses must scroll through detailed medication information while tracking their progress"
+                    }
                 },
                 {
                     "heading": "The Investigation",
