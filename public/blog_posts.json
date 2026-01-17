@@ -1,0 +1,102 @@
+[
+    {
+        "id": "chrome-extension-design-system",
+        "slug": "chrome-extension-design-system",
+        "title": "Building a Chrome Extension to Track Design System Adoption",
+        "date": "Jan 2026",
+        "readTime": "8 min read",
+        "summary": "How we built a developer tool that scans web pages to detect and analyze design system components in real-time—without requiring any instrumentation in your application code.",
+        "tags": [
+            "Chrome Extension",
+            "Design Systems",
+            "DevTools",
+            "Web Components"
+        ],
+        "featured": true,
+        "coverImage": null,
+        "content": {
+            "introduction": "Your team has invested months building a comprehensive design system—components, tokens, documentation, and all. But here's the hard question: How do you know if teams are actually using it? That's exactly why we built a Chrome extension to detect and analyze design system components on any web page.",
+            "sections": [
+                {
+                    "heading": "The Challenge",
+                    "text": "Sure, you can check npm download stats or scan repositories, but that only tells you if the package was installed, not if components are being used correctly in production. What you really need is real-time visibility into which components are live on which pages."
+                },
+                {
+                    "heading": "Key Features",
+                    "list": [
+                        "🔍 Automatic Component Discovery - Scans entire page including Shadow DOM",
+                        "📊 Usage Analytics - Component counts, properties, and configurations",
+                        "🎯 Visual Highlighting - Interactive component inspection",
+                        "👁️ Deep Inspection - View properties, slots, and CSS Shadow Parts"
+                    ]
+                },
+                {
+                    "heading": "Technical Stack",
+                    "text": "Built with Vite, React 19, TypeScript, Tailwind CSS v4, and CRXJS for modern Chrome extension development."
+                },
+                {
+                    "heading": "Detection Strategies",
+                    "list": [
+                        "Custom Element Detection - Scan for elements with your tag prefix",
+                        "Shadow DOM Traversal - Recursive scanning through encapsulated trees",
+                        "Property Inspection - Introspect reactive properties from frameworks like Lit",
+                        "Slot Analysis - Identify content projection patterns"
+                    ]
+                }
+            ]
+        },
+        "demoType": "interactive"
+    },
+    {
+        "id": "figma-code-connect",
+        "slug": "figma-code-connect",
+        "title": "Figma Code Connect: Bridging Design and Development",
+        "date": "Dec 2025",
+        "readTime": "5 min read",
+        "summary": "A practical look at implementing Figma Code Connect to automate component code generation, with real-world results showing 60% faster handoffs and improved design consistency.",
+        "tags": [
+            "Figma",
+            "Design Systems",
+            "Developer Tools",
+            "Component Libraries"
+        ],
+        "featured": false,
+        "coverImage": null,
+        "content": {
+            "introduction": "Figma Code Connect acts as a bridge between your design system in Figma and your component library in code. When designers create components in Figma, developers can instantly see the exact code needed from your library—eliminating guesswork and reducing handoff friction.",
+            "sections": [
+                {
+                    "heading": "The Design-to-Code Gap",
+                    "text": "Before Code Connect, our workflow involved designers creating components in Figma, then developers manually translating those designs into code. This led to inconsistencies, with slight variations in spacing, colors, and states appearing across different pages. We were averaging 2-3 revision cycles per feature."
+                },
+                {
+                    "heading": "How Code Connect Works",
+                    "text": "Code Connect creates a mapping between Figma components and your React/Vue/Angular component library. When a developer inspects a button in Figma, they see the exact JSX or template code to use, complete with all the right props and variants."
+                },
+                {
+                    "heading": "What Works Exceptionally Well",
+                    "list": [
+                        "Simple Components: Buttons, badges, tooltips, and icons get instant code generation with 60% faster handoffs",
+                        "Consistency: Eliminates visual inconsistencies by ensuring developers use the exact component variants",
+                        "Onboarding: New developers can quickly learn the component API by seeing usage examples directly in Figma",
+                        "Documentation: Living examples that stay in sync with your actual component library"
+                    ]
+                },
+                {
+                    "heading": "Where Manual Work Still Matters",
+                    "list": [
+                        "Complex components like modals and multi-step forms need business logic that Code Connect can't provide",
+                        "State management and event handlers must still be implemented by developers",
+                        "Form validation, error handling, and conditional rendering require custom code",
+                        "Integration with backend APIs and data fetching remains developer responsibility"
+                    ]
+                },
+                {
+                    "heading": "Real-World Impact",
+                    "text": "After implementing Code Connect for 25 foundational components, we reduced design-to-development time by 8 hours per sprint. Visual inconsistencies dropped from 15 per release to just 3. Most importantly, developers reported higher confidence in implementation accuracy."
+                }
+            ]
+        },
+        "demoType": "interactive"
+    }
+]
