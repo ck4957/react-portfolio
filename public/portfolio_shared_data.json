@@ -5,6 +5,12 @@
       "Full stack Developer",
       "Software Engineer"
     ],
+    "patent": {
+      "title": "Systems and Methods for Providing prompts on an Electronic Device",
+      "number": "US-20230004865-A1",
+      "status": "Published: 2023-01-05, Patent Pending",
+      "url": "https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/20230004865"
+    },
     "social": [
       {
         "name": "github",
@@ -25,6 +31,11 @@
         "name": "Medium",
         "url": "https://medium.com/@ck4957",
         "class": "fab fa-medium"
+      },
+      {
+        "name": "Patent",
+        "url": "https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/20230004865",
+        "class": "fa fa-certificate"
       }
     ],
     "image": "Chirag.jpg",

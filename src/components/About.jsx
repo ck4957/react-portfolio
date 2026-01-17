@@ -4,6 +4,7 @@ class About extends Component {
   render() {
     if (this.props.sharedBasicInfo) {
       var profilepic = "images/" + this.props.sharedBasicInfo.image;
+      var patent = this.props.sharedBasicInfo.patent;
     }
     if (this.props.resumeBasicInfo) {
       var sectionName = this.props.resumeBasicInfo.section_name.about;
@@ -65,6 +66,12 @@ class About extends Component {
                     <br />
                     <br />
                     {about}
+                    {patent && (
+                      <div className="mt-3">
+                        <span className="iconify mr-2" data-icon="fa-solid:certificate" data-inline="false"></span>
+                        <strong>Patent:</strong> <a href={patent.url} target="_blank" rel="noopener noreferrer" title={patent.title}>{patent.number}</a> — {patent.title} ({patent.status})
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>

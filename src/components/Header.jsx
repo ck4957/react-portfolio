@@ -10,6 +10,7 @@ const Header = ({ sharedData, sharedBasicInfo, resumeBasicInfo }) => {
   const [awsDeaBadge, setAwsDeaBadge] = useState("");
   const [azureAiBadge, setAzureAiBadge] = useState("");
   const [name, setName] = useState("");
+  const [patent, setPatent] = useState(null);
   //const [sectionName, setSectionName] = useState("");
   const [hello, setHello] = useState("");
   const [about, setAbout] = useState("");
@@ -42,6 +43,9 @@ const Header = ({ sharedData, sharedBasicInfo, resumeBasicInfo }) => {
       //setSectionName(resumeBasicInfo.section_name.about);
       setHello(resumeBasicInfo.description_header);
       setAbout(resumeBasicInfo.description);
+    }
+    if (sharedBasicInfo?.patent) {
+      setPatent(sharedBasicInfo.patent);
     }
   }, [sharedData, sharedBasicInfo, resumeBasicInfo]);
 
@@ -137,6 +141,12 @@ const Header = ({ sharedData, sharedBasicInfo, resumeBasicInfo }) => {
                 {about}
                 <br />
                 {networks}
+                {patent && (
+                  <div className="mt-3">
+                    <span className="iconify mr-2" data-icon="fa-solid:certificate" data-inline="false"></span>
+                    <strong>Patent:</strong> <a href={patent.url} target="_blank" rel="noopener noreferrer" title={patent.title}>{patent.number}</a> — {patent.title} ({patent.status})
+                  </div>
+                )}
                 <span className="m-4">
                   <Link to="/#blog" style={{ color: 'inherit' }} title="Blog & Learnings">
                     <span className="iconify" data-icon="clarity:contract-line" data-inline="false"></span>
