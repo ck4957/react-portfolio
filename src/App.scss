@@ -400,8 +400,61 @@ header h1 {
 .skill-icon {
 	font-size: 180%;
 	color: white;
-	text-align: center;
+	text-align: left;
 	position: relative;
+}
+
+.skill-category-group {
+	display: grid;
+	grid-template-columns: 250px 1fr;
+	gap: 3rem;
+	align-items: center;
+	margin-bottom: 3rem;
+	padding: 0 5%;
+}
+
+.skill-category-name {
+	text-align: right;
+	padding-right: 2rem;
+	border-right: 3px solid #e9d5a1;
+}
+
+.skill-category-name h3 {
+	color: #e9d5a1;
+	font-size: 2rem;
+	margin: 0;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+.skill-category-icons {
+	display: flex;
+	align-items: center;
+}
+
+.skill-category-icons ul {
+	margin: 0;
+	padding: 0;
+}
+
+@media (max-width: 768px) {
+	.skill-category-group {
+		grid-template-columns: 1fr;
+		gap: 1.5rem;
+	}
+	
+	.skill-category-name {
+		text-align: center;
+		padding-right: 0;
+		border-right: none;
+		border-bottom: 3px solid #e9d5a1;
+		padding-bottom: 1rem;
+	}
+	
+	.skill-icon {
+		text-align: center;
+	}
 }
 
 footer {
