@@ -8,7 +8,7 @@ const BlogPost = ({ slug }) => {
   React.useEffect(() => {
     const fetchPost = async () => {
       try {
-        const response = await fetch('/blog_posts.json');
+        const response = await fetch('./blog_posts.json');
         const posts = await response.json();
         const foundPost = posts.find(p => p.slug === slug);
         setPost(foundPost);
