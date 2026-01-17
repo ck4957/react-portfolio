@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useMemo } from "react";
 import Typical from "react-typical";
 import Switch from "react-switch";
+import { Link } from "../router";
 
 const Header = ({ sharedData, sharedBasicInfo, resumeBasicInfo }) => {
   const [checked, setChecked] = useState(false);
@@ -152,6 +153,11 @@ const Header = ({ sharedData, sharedBasicInfo, resumeBasicInfo }) => {
                 {about}
                 <br />
                 {networks}
+                <span className="m-4">
+                  <Link href="/blog" style={{ color: 'inherit' }} title="Blog & Learnings">
+                    <span className="iconify" data-icon="clarity:contract-line" data-inline="false"></span>
+                  </Link>
+                </span>
               </div>
             </div>
           </div>

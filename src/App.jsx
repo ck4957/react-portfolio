@@ -5,10 +5,14 @@ import Footer from './components/Footer';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
+import Blog from './components/Blog';
+import { usePath } from './router';
 
 const App = () => {
   const [sharedData, setSharedData] = useState({});
   const [resumeData, setResumeData] = useState({});
+  const path = usePath();
+
   useEffect(() => {
     const fetchSharedData = async () => {
       try {
@@ -56,6 +60,10 @@ const App = () => {
     fetchSharedData();
     fetchResumeData();
   }, []);
+
+  if (path === '/blog') {
+    return <Blog />;
+  }
 
   return (
     <div>
