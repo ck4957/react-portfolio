@@ -230,6 +230,26 @@
 	margin-bottom: 1.5rem;
 }
 
+.blog-post-image {
+	margin: 1.5rem 0 2rem;
+	text-align: center;
+}
+
+.blog-post-image img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 12px;
+	box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.blog-post-image figcaption {
+	margin-top: 1rem;
+	font-size: 1.3rem;
+	color: #6b5c4c;
+	font-style: italic;
+	line-height: 1.5;
+}
+
 .blog-post-list {
 	list-style: none;
 	padding-left: 0;

@@ -72,6 +72,18 @@ const BlogPost = () => {
             <div key={idx} className="blog-post-section">
               <h2>{section.heading}</h2>
               {section.text && <p>{section.text}</p>}
+              {section.image && (
+                <figure className="blog-post-image">
+                  <img 
+                    src={section.image.src} 
+                    alt={section.image.alt} 
+                    loading="lazy"
+                  />
+                  {section.image.caption && (
+                    <figcaption>{section.image.caption}</figcaption>
+                  )}
+                </figure>
+              )}
               {section.list && (
                 <ul className="blog-post-list">
                   {section.list.map((item, i) => (
