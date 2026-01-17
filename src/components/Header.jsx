@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo } from "react";
 import Typical from "react-typical";
 import Switch from "react-switch";
-import { Link } from "../router";
+import { Link } from "react-router-dom";
 
 const Header = ({ sharedData, sharedBasicInfo, resumeBasicInfo }) => {
   const [checked, setChecked] = useState(false);
@@ -18,7 +18,6 @@ const Header = ({ sharedData, sharedBasicInfo, resumeBasicInfo }) => {
 
   if (sharedBasicInfo && sharedBasicInfo.social) {
     var networks = sharedBasicInfo?.social?.map(function (network) {
-      console.log(network);
       return (
         <span key={network.name} className="m-4">
           <a href={network.url} target="_blank" rel="noopener noreferrer">
@@ -154,7 +153,7 @@ const Header = ({ sharedData, sharedBasicInfo, resumeBasicInfo }) => {
                 <br />
                 {networks}
                 <span className="m-4">
-                  <Link href="/blog" style={{ color: 'inherit' }} title="Blog & Learnings">
+                  <Link to="/#blog" style={{ color: 'inherit' }} title="Blog & Learnings">
                     <span className="iconify" data-icon="clarity:contract-line" data-inline="false"></span>
                   </Link>
                 </span>

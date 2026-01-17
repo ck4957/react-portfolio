@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from '../router';
+import { Link } from 'react-router-dom';
 
 const Blog = () => {
   const [posts, setPosts] = useState([]);
@@ -7,7 +7,7 @@ const Blog = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await fetch('./blog_posts.json');
+        const response = await fetch('blog_posts.json');
         const data = await response.json();
         setPosts(data);
       } catch (error) {
@@ -26,7 +26,7 @@ const Blog = () => {
             </div>
             <div className="learning-grid-wrapper">
             {posts.map((post) => (
-                <Link href={`/blog/${post.slug}`} key={post.id} style={{ textDecoration: 'none', color: 'inherit' }}>
+                <Link to={`/blog/${post.slug}`} key={post.id} style={{ textDecoration: 'none', color: 'inherit' }}>
                   <article className="learning-entry blog-entry-card">
                     {post.featured && <div className="blog-featured-badge">Featured</div>}
                     <div className="learning-entry-header">

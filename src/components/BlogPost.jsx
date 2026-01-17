@@ -1,14 +1,18 @@
 import React from 'react';
-import { Link } from '../router';
+import { Link, useParams } from 'react-router-dom';
 
-const BlogPost = ({ slug }) => {
+const BlogPost = () => {
+  const { slug } = useParams();
   const [post, setPost] = React.useState(null);
   const [loading, setLoading] = React.useState(true);
 
   React.useEffect(() => {
+    // Scroll to top when blog post loads
+    window.scrollTo(0, 0);
+
     const fetchPost = async () => {
       try {
-        const response = await fetch('./blog_posts.json');
+        const response = await fetch('blog_posts.json');
         const posts = await response.json();
         const foundPost = posts.find(p => p.slug === slug);
         setPost(foundPost);
@@ -34,7 +38,7 @@ const BlogPost = ({ slug }) => {
       <section id="blog-post" style={{ minHeight: '100vh', padding: '50px 20px' }}>
         <div style={{ textAlign: 'center' }}>
           <h2>Post not found</h2>
-          <Link href="/#blog" className="learning-pill" style={{ marginTop: '20px' }}>
+          <Link to="/" className="learning-pill" style={{ marginTop: '20px' }}>
             Back to Blog
           </Link>
         </div>
@@ -46,7 +50,7 @@ const BlogPost = ({ slug }) => {
     <section id="blog-post">
       <article className="blog-post-container">
         <header className="blog-post-header">
-          <Link href="/#blog" className="blog-back-link">
+          <Link to="/" className="blog-back-link">
             ← Back to Blog
           </Link>
           <h1 className="blog-post-title">{post.title}</h1>

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import './App.scss';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -7,12 +8,46 @@ import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Blog from './components/Blog';
 import BlogPost from './components/BlogPost';
-import { usePath } from './router';
+
+const HomePage = ({ sharedData, resumeData }) => {
+  const location = useLocation();
+
+  // Scroll to blog section if hash is present
+  useEffect(() => {
+    if (location.hash === '#blog') {
+      const blogSection = document.getElementById('blog');
+      if (blogSection) {
+        blogSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location]);
+
+  return (
+    <div>
+      <Header sharedData={sharedData}
+              resumeBasicInfo={resumeData.basic_info}
+              sharedBasicInfo={sharedData.basic_info} />
+      <Blog />
+      <Projects
+        resumeProjects={resumeData.projects}
+        resumeBasicInfo={resumeData.basic_info}
+      />
+      <Skills
+        sharedSkills={sharedData.skills}
+        resumeBasicInfo={resumeData.basic_info}
+      />
+      <Experience
+        resumeExperience={resumeData.experience}
+        resumeBasicInfo={resumeData.basic_info}
+      />
+      <Footer sharedBasicInfo={sharedData.basic_info} />
+    </div>
+  );
+};
 
 const App = () => {
   const [sharedData, setSharedData] = useState({});
   const [resumeData, setResumeData] = useState({});
-  const path = usePath();
 
   useEffect(() => {
     const fetchSharedData = async () => {
@@ -62,36 +97,12 @@ const App = () => {
     fetchResumeData();
   }, []);
 
-  if (path.startsWith('/blog/')) {
-    const slug = path.split('/blog/')[1];
-    return <BlogPost slug={slug} />;
-  }
-
   return (
-    <div>
-    <Header sharedData={sharedData}
-            resumeBasicInfo={resumeData.basic_info}
-            sharedBasicInfo={sharedData.basic_info} />
-    {/* <About 
-      resumeBasicInfo={this.state.resumeData.basic_info}
-      sharedBasicInfo={this.state.sharedData.basic_info}
-    /> */}
-    <Blog />
-    <Projects
-      resumeProjects={resumeData.projects}
-      resumeBasicInfo={resumeData.basic_info}
-    />
-    <Skills
-      sharedSkills={sharedData.skills}
-      resumeBasicInfo={resumeData.basic_info}
-    />
-    <Experience
-      resumeExperience={resumeData.experience}
-      resumeBasicInfo={resumeData.basic_info}
-    />
-    <Footer sharedBasicInfo={sharedData.basic_info} />
-  </div>
-);
+    <Routes>
+      <Route path="/" element={<HomePage sharedData={sharedData} resumeData={resumeData} />} />
+      <Route path="/blog/:slug" element={<BlogPost />} />
+    </Routes>
+  );
 };
 
 export default App;

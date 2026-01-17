@@ -6,7 +6,19 @@ const listeners = new Set();
 export const navigate = (path) => {
   window.history.pushState({}, "", path);
   listeners.forEach((listener) => listener(path));
-  window.scrollTo(0, 0); // Scroll to top on navigation
+  
+  // Handle hash scrolling
+  if (path.includes('#')) {
+    const hash = path.split('#')[1];
+    setTimeout(() => {
+      const element = document.getElementById(hash);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
+  } else {
+    window.scrollTo(0, 0); // Scroll to top on navigation
+  }
 };
 
 // Hook to get the current path
