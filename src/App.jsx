@@ -62,10 +62,6 @@ const App = () => {
     fetchResumeData();
   }, []);
 
-  if (path === '/blog') {
-    return <Blog />;
-  }
-
   if (path.startsWith('/blog/')) {
     const slug = path.split('/blog/')[1];
     return <BlogPost slug={slug} />;
@@ -80,6 +76,7 @@ const App = () => {
       resumeBasicInfo={this.state.resumeData.basic_info}
       sharedBasicInfo={this.state.sharedData.basic_info}
     /> */}
+    <Blog />
     <Projects
       resumeProjects={resumeData.projects}
       resumeBasicInfo={resumeData.basic_info}

@@ -44,11 +44,6 @@ const Blog = () => {
                 </Link>
             ))}
             </div>
-             <div style={{textAlign: 'center', marginTop: '30px', paddingBottom: '30px'}}>
-                <Link href="/" className="learning-pill" style={{textDecoration: 'none'}}>
-                     Back to Home
-                </Link>
-             </div>
         </div>
     </section>
   );

@@ -34,7 +34,7 @@ const BlogPost = ({ slug }) => {
       <section id="blog-post" style={{ minHeight: '100vh', padding: '50px 20px' }}>
         <div style={{ textAlign: 'center' }}>
           <h2>Post not found</h2>
-          <Link href="/blog" className="learning-pill" style={{ marginTop: '20px' }}>
+          <Link href="/#blog" className="learning-pill" style={{ marginTop: '20px' }}>
             Back to Blog
           </Link>
         </div>
@@ -46,7 +46,7 @@ const BlogPost = ({ slug }) => {
     <section id="blog-post">
       <article className="blog-post-container">
         <header className="blog-post-header">
-          <Link href="/blog" className="blog-back-link">
+          <Link href="/#blog" className="blog-back-link">
             ← Back to Blog
           </Link>
           <h1 className="blog-post-title">{post.title}</h1>
